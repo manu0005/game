@@ -1,0 +1,14 @@
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+
+  td {
+    border: solid black 1px;
+    width: 32px;
+    height: 32px;
+  }
+
+  td.canPlayHere {
+    background-color: yellow;
+  }
+}

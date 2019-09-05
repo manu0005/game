@@ -1,0 +1,12 @@
+<p>Blanc : nombre de pions {{nbBlanc}}</p>
+<p>Noir : nombre de pions {{nbNoir}}</p>
+<p *ngIf="vainqueur">{{vainqueur}}</p>
+<table *ngIf="getObservable() | async">
+  <tbody>
+    <tr *ngFor="let l of board; let i = index">
+      <td *ngFor="let c of l; let j = index; trackBy: trackByFt" [class.canPlayHere]="canPlay(i, j)" (click)="clickOn(i, j)">
+        <app-pion *ngIf="!isEmpty(c)" [typeCellule]="c"></app-pion>
+      </td>
+    </tr>
+  </tbody>
+</table>
